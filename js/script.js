@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  console.log(e);
   test();
 });
 const test = () => {
@@ -63,39 +62,50 @@ const test = () => {
   let text = document.createElement("p");
   let discography_block = document.querySelector(".discography-block");
 
-  aboutData.map((item) => {
-    let sidebar_item1 = document.querySelector(".item-link1");
-    sidebar_item1.addEventListener("click", function () {
-      let about_block = document.querySelector(".about-block");
-      text.classList = "show-text";
-      text.textContent = item.artist_description;
-      about_block.append(text);
-      discography_block.classList = "hidden";
-    });
-  });
+  function showText(){
+    aboutData.map((item) => {
+        let about_block = document.querySelector(".about-block");
+        text.classList.add("show-text");
+        text.textContent = item.artist_description;
+        about_block.append(text);
+        discography_block.classList.add("hidden");
+      });
+  }
+  
+  let sidebar_item1 = document.querySelector(".item-link1");
+  sidebar_item1.addEventListener("click", showText);
 
-  discographyData.map((item) => {
-    let sidebar_item2 = document.querySelector(".item-link2");
-    sidebar_item2.addEventListener("click", function () {
-      text.classList = "hidden";
-      discography_block.classList = "show-discography";
-      let nav = document.createElement("nav");
-      nav.classList = "discography-menu";
-      let ul = document.createElement("ul");
-      ul.classList = "discography-list";
-      let li = document.createElement("li");
-      li.classList = "discography-item";
-      let album_pic = document.createElement("img");
-      album_pic.classList = "discography-img";
-      let album_title = document.createElement("h1");
-      let released_date = document.createElement("span");
-      album_title.textContent = item.title;
-      released_date.innerHTML = item.released;
-      album_pic.setAttribute("src", item.album_pic);
-      li.append(album_pic, album_title, released_date);
-      ul.append(li);
+  let sidebar_item2 = document.querySelector(".item-link2");
+  sidebar_item2.addEventListener("click", showDiscography);
+  
+  function showDiscography () {
+     discography_block.innerHTML = "";
+     text.classList.add("hidden");
+     text.classList.remove("show-text");
+     discography_block.classList.add("show-discography");
+     discography_block.classList.remove("hidden");
+     let nav = document.createElement("nav");
+     nav.classList.add("discography-menu");
+     let ul = document.createElement("ul");
+     ul.classList.add("discography-list");
+    
+     discographyData.map((item) => {
+        let li = document.createElement("li");
+        li.classList.add("discography-item");
+        let album_pic = document.createElement("img");
+        album_pic.classList.add("discography-img");
+        let album_title = document.createElement("h1");
+        album_title.classList.add("album-title")
+        let released_date = document.createElement("span");
+        released_date.classList.add("released-date")
+        album_title.textContent = item.title;
+        released_date.innerHTML = item.released;
+        album_pic.setAttribute("src", item.album_pic);
+        li.append(album_pic, album_title, released_date);
+        ul.append(li);
+      });
       nav.append(ul);
       discography_block.append(nav);
-    });
-  });
+      console.log(discography_block);
+    }
 };
