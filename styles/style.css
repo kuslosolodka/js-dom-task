@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
 }
-.wrapper .sidebar {
+.sidebar {
   background: #407088;
   position: fixed;
   top: 0;
@@ -16,12 +16,12 @@
   padding: 20px 0;
   font-weight: 300;
 }
-.wrapper .sidebar .profile {
+.sidebar .profile {
   margin-bottom: 30px;
   text-align: center;
 }
 
-.wrapper .sidebar .profile img {
+.sidebar .profile img {
   display: block;
   width: 100px;
   height: 100px;
@@ -33,20 +33,19 @@
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
 }
-.wrapper .sidebar .profile img:hover {
+.sidebar .profile img:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
-.wrapper .sidebar .profile h3 {
+.sidebar .profile h3 {
   color: #ffffff;
   margin: 15px 0 5px;
 }
-
-.wrapper .sidebar .profile p {
+.sidebar .profile p {
   color: rgb(206, 240, 253);
   font-size: 14px;
 }
-.wrapper .sidebar ul li a {
+.sidebar ul li a {
   display: block;
   padding: 13px 30px;
   border-bottom: 1px solid #10558d;
@@ -54,15 +53,15 @@
   font-size: 16px;
   position: relative;
 }
-.wrapper .sidebar ul li a:hover,
-.wrapper .sidebar ul li a.active {
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
   color: #0c7db1;
 
   background: white;
   border-right: 2px solid rgb(5, 68, 104);
 }
-.wrapper .sidebar ul li a:hover:before,
-.wrapper .sidebar ul li a.active:before {
+.sidebar ul li a:hover:before,
+.sidebar ul li a.active:before {
   display: block;
 }
 .about-block {
@@ -75,11 +74,112 @@
 }
 .show-text {
   display: block;
-  margin: 200px 0px 30px 230px;
+  margin: 120px 100px 10px 300px;
+  font-size: large;
+  text-align: justify;
+  line-height: 1.6;
+  white-space: pre-line;
 }
 .show-discography nav ul {
   margin: 30px 0px 30px 330px;
   display: grid;
   grid-template-columns: repeat(3, 4fr);
   grid-template-rows: repeat(3, 4fr);
+}
+.discography-item {
+  margin: 10px 10px 20px 10px;
+}
+.discography-item:hover {
+  cursor: pointer;
+}
+.album-title {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.discography-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+@media only screen and (max-width: 768px) {
+  .show-text {
+    display: block;
+    margin: 20px 100px 10px 300px;
+    font-size: large;
+    text-align: justify;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  .show-discography nav ul {
+    margin: 30px 0px 30px 330px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    background: #407088;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 250px;
+    padding: 10px 0;
+    font-weight: 300;
+  }
+  .sidebar .profile {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 23%;
+  }
+  .sidebar .profile img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  .sidebar .profile h3 {
+    color: #ffffff;
+    margin: 15px 0 5px;
+  }
+  .sidebar ul li a {
+    display: block;
+    padding: 10px 20px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+  }
+  .sidebar ul li a:hover,
+  .sidebar ul li a.active {
+    color: #0c7db1;
+    background: white;
+    border-right: 2px solid rgb(5, 68, 104);
+  }
+  .sidebar ul li a:hover:before,
+  .sidebar ul li a.active:before {
+    display: block;
+  }
+  .about-block {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .show-text {
+    display: block;
+    margin: 270px 20px 20px 20px;
+    font-size: large;
+    text-align: justify;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  .show-discography nav ul {
+    margin: 270px 0px 30px 30px;
+    display: block;
+  }
 }
