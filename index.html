@@ -9,30 +9,25 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    /> -->
     <title>JS DOM</title>
   </head>
   <body>
-    <!-- <input type="checkbox" id="menu-icon" class="menu-checkbox" />
-    <label class="menu-label" for="menu-icon">
-      <i class="fa-solid fa-bars"></i>
-    </label> -->
     <nav class="sidebar">
       <div class="profile">
         <img
+          class="profile-picture"
           src="https://media.pitchfork.com/photos/5ec6c01eee33b6018584d941/2:1/w_1920,h_960,c_limit/Lana%20Del%20Rey%204.png"
-          alt="profile_picture"
+          alt="profile picture"
         />
-        <h3>Lana Del Rey</h3>
-        <p>Singer</p>
+        <h3 class="profile-title">Lana Del Rey</h3>
+        <p class="profile-description">Singer</p>
       </div>
       <ul class="sidebar-menu">
-        <li class="sidebar-item"><a href="#" class="item-link1">About</a></li>
         <li class="sidebar-item">
-          <a href="#" class="item-link2">Discography</a>
+          <a href="#" class="item-link1" id="item-link">About</a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="item-link2" id="item-link">Discography</a>
         </li>
       </ul>
     </nav>
