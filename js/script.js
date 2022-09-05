@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", (e) => {
-  test();
+  renderData();
 });
-const test = () => {
-  let aboutData = [
+const renderData = () => {
+  const aboutBlockData = [
     {
       artist_description:
         "Elizabeth Woolridge Grant (born June 21, 1985), known professionally as Lana Del Rey, is an American singer and songwriter. Her music is noted for its cinematic quality and exploration of tragic romance, glamour, and melancholia, containing references to contemporary pop culture and 1950s–1960s Americana. She is the recipient of various accolades, including two Brit Awards, two MTV Europe Music Awards, and a Satellite Award, in addition to nominations for six Grammy Awards and a Golden Globe Award. Variety honored her at their Hitmakers Awards for being one of the most influential singer-songwriters of the 21st century. Raised in upstate New York, Del Rey moved to New York City in 2005 to pursue a music career. After numerous projects, including her self-titled debut studio album, Del Rey's breakthrough came in 2011 with the viral success of her single Video Games, she subsequently signed a recording contract with Polydor and Interscope. She achieved critical and commercial success with her second album, Born to Die (2012), which contained the sleeper hit Summertime Sadness. Del Reys third album, Ultraviolence (2014), featured greater use of guitar-driven instrumentation and debuted atop the U.S. Billboard 200. Her fourth and fifth albums, Honeymoon (2015) and Lust for Life (2017), saw a return to the stylistic traditions of her earlier releases, while her critically acclaimed sixth album, Norman Fucking Rockwell! (2019), explored soft rock. Del Rey followed this with the albums Chemtrails over the Country Club and Blue Banisters, both in 2021. Del Rey has collaborated on soundtracks for visual media, in 2013, she wrote and starred in the critically acclaimed musical short Tropico, and performed Young and Beautiful for the romantic drama The Great Gatsby. In 2014, she recorded Once Upon a Dream for the dark fantasy adventure film Maleficent and the self-titled theme song for the biopic Big Eyes. Del Rey collaborated with Ariana Grande and Miley Cyrus on Don't Call Me Angel for the action comedy Charlie's Angels (2019), which peaked at number 13 on the U.S. Billboard Hot 100. Outside of music, Del Rey published the poetry and photography collection Violet Bent Backwards over the Grass (2020). ",
     },
   ];
-  let discographyData = [
+  const discographyBlockData = [
     {
       title: "Lana Del Ray",
       released: "January 4, 2010",
@@ -59,29 +59,29 @@ const test = () => {
     },
   ];
 
-  let text = document.createElement("p");
-  let discography_block = document.querySelector(".discography-block");
+  const p = document.createElement("p");
+  const discography_block = document.querySelector(".discography-block");
 
   function showText() {
-    aboutData.map((item) => {
+    aboutBlockData.map((item) => {
       let about_block = document.querySelector(".about-block");
-      text.classList.add("show-text");
-      text.textContent = item.artist_description;
-      about_block.append(text);
+      p.classList.add("show-text");
+      p.textContent = item.artist_description;
+      about_block.append(p);
       discography_block.classList.add("hidden");
     });
   }
 
-  let sidebar_item1 = document.querySelector(".item-link1");
+  const sidebar_item1 = document.querySelector(".item-link1");
   sidebar_item1.addEventListener("click", showText);
 
-  let sidebar_item2 = document.querySelector(".item-link2");
+  const sidebar_item2 = document.querySelector(".item-link2");
   sidebar_item2.addEventListener("click", showDiscography);
 
   function showDiscography() {
     discography_block.innerHTML = "";
-    text.classList.add("hidden");
-    text.classList.remove("show-text");
+    p.classList.add("hidden");
+    p.classList.remove("show-text");
     discography_block.classList.add("show-discography");
     discography_block.classList.remove("hidden");
     let nav = document.createElement("nav");
@@ -89,7 +89,7 @@ const test = () => {
     let ul = document.createElement("ul");
     ul.classList.add("discography-list");
 
-    discographyData.map((item) => {
+    discographyBlockData.map((item) => {
       let li = document.createElement("li");
       li.classList.add("discography-item");
       let album_pic = document.createElement("img");
