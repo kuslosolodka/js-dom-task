@@ -171,14 +171,14 @@ audio::-webkit-media-controls-time-remaining-display {
     font-family: "Raleway", sans-serif;
   }
 }
-@media only screen and (max-width: 600px)  {
+@media only screen and (max-width: 600px) {
   .sidebar {
     background: #407088;
     position: fixed;
     top: 0;
     left: 0;
     width: 500px;
-    height: 270px;
+    height: 280px;
     padding: 10px 0;
     font-weight: 300;
   }
@@ -230,17 +230,17 @@ audio::-webkit-media-controls-time-remaining-display {
     white-space: pre-line;
   }
   .show-discography .discography-menu .discography-list {
-    margin: 280px 0px 35px 35px;
+    margin: 280px 0px 40px 40px;
     display: block;
   }
   .show-music {
     display: block;
   }
   .show-music .gif-picture {
-    margin: 280px 45px 0 45px;
+    margin: 280px 55px 0 55px;
   }
   .songs-list {
-    margin: 10px 45px 0 45px;
+    margin: 10px 55px 0 55px;
   }
   .gif-picture {
     object-fit: cover;
