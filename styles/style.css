@@ -171,6 +171,98 @@ audio::-webkit-media-controls-time-remaining-display {
     font-family: "Raleway", sans-serif;
   }
 }
+@media only screen and (max-width: 600px) and (max-height: 844px) {
+  .sidebar {
+    background: #407088;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 270px;
+    padding: 10px 0;
+    font-weight: 300;
+  }
+  .sidebar .profile {
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 23%;
+  }
+  .sidebar .profile .profile-picture {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+  }
+  .sidebar .profile .profile-title {
+    color: #ffffff;
+    margin: 15px 0 5px;
+  }
+  .sidebar .sidebar-menu .sidebar-item #item-link {
+    display: block;
+    padding: 5px 20px;
+    border-bottom: 1px solid #407088;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+  }
+  .sidebar .sidebar-menu .sidebar-item #item-link:hover,
+  .sidebar .sidebar-menu .sidebar-item #item-link.active {
+    color: #0c7db1;
+    background: white;
+  }
+  .sidebar .sidebar-menu .sidebar-item #item-link:hover:before,
+  .sidebar .sidebar-menu .sidebar-item #item-link.active:before {
+    display: block;
+  }
+  .about-block {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+  .show-text {
+    display: block;
+    margin: 280px 20px 20px 20px;
+    font-size: large;
+    text-align: justify;
+    line-height: 1.6;
+    white-space: pre-line;
+  }
+  .show-discography .discography-menu .discography-list {
+    margin: 280px 35px 0px 35px;
+    display: block;
+  }
+  .show-music {
+    display: block;
+  }
+  .show-music .gif-picture {
+    margin: 280px 45px 0 45px;
+  }
+  .songs-list {
+    margin: 10px 45px 0 45px;
+  }
+  .gif-picture {
+    object-fit: cover;
+    margin: 0px -60px;
+    height: 200px;
+    width: 300px;
+  }
+  .audio-title {
+    padding: 5px 10px;
+    width: 200px;
+  }
+  audio::-webkit-media-controls-panel {
+    background: #d23232;
+  }
+  audio::-webkit-media-controls-current-time-display {
+    font-family: "Raleway", sans-serif;
+  }
+  audio::-webkit-media-controls-time-remaining-display {
+    font-family: "Raleway", sans-serif;
+  }
+}
+
 @media only screen and (max-width: 600px) and (max-height: 812px) {
   .sidebar {
     background: #407088;
@@ -262,95 +354,3 @@ audio::-webkit-media-controls-time-remaining-display {
     font-family: "Raleway", sans-serif;
   }
 }
-@media only screen and (max-width: 600px) and (max-height: 844px) {
-  .sidebar {
-    background: #407088;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 500px;
-    height: 265px;
-    padding: 10px 0;
-    font-weight: 300;
-  }
-  .sidebar .profile {
-    margin-bottom: 20px;
-    text-align: center;
-    margin-right: 23%;
-  }
-  .sidebar .profile .profile-picture {
-    display: block;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    margin: 0 auto;
-    object-fit: cover;
-  }
-  .sidebar .profile .profile-title {
-    color: #ffffff;
-    margin: 15px 0 5px;
-  }
-  .sidebar .sidebar-menu .sidebar-item #item-link {
-    display: block;
-    padding: 5px 20px;
-    border-bottom: 1px solid #407088;
-    color: rgb(241, 237, 237);
-    font-size: 16px;
-    position: relative;
-  }
-  .sidebar .sidebar-menu .sidebar-item #item-link:hover,
-  .sidebar .sidebar-menu .sidebar-item #item-link.active {
-    color: #0c7db1;
-    background: white;
-  }
-  .sidebar .sidebar-menu .sidebar-item #item-link:hover:before,
-  .sidebar .sidebar-menu .sidebar-item #item-link.active:before {
-    display: block;
-  }
-  .about-block {
-    text-align: center;
-    justify-content: center;
-    display: flex;
-  }
-  .show-text {
-    display: block;
-    margin: 280px 20px 20px 20px;
-    font-size: large;
-    text-align: justify;
-    line-height: 1.6;
-    white-space: pre-line;
-  }
-  .show-discography .discography-menu .discography-list {
-    margin: 280px 30px 0px 35px;
-    display: block;
-  }
-  .show-music {
-    display: block;
-  }
-  .show-music .gif-picture {
-    margin: 280px 45px 0 45px;
-  }
-  .songs-list {
-    margin: 10px 45px 0 45px;
-  }
-  .gif-picture {
-    object-fit: cover;
-    margin: 0px -60px;
-    height: 200px;
-    width: 300px;
-  }
-  .audio-title {
-    padding: 5px 10px;
-    width: 200px;
-  }
-  audio::-webkit-media-controls-panel {
-    background: #d23232;
-  }
-  audio::-webkit-media-controls-current-time-display {
-    font-family: "Raleway", sans-serif;
-  }
-  audio::-webkit-media-controls-time-remaining-display {
-    font-family: "Raleway", sans-serif;
-  }
-}
-
