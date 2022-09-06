@@ -99,6 +99,34 @@
   height: 300px;
   object-fit: cover;
 }
+.show-music {
+  display: flex;
+  justify-content: center;
+}
+.show-music .gif-picture {
+  margin: 130px 50px 0 200px;
+}
+.songs-list {
+  margin: 100px 0;
+}
+.gif-picture {
+  object-fit: cover;
+  margin: 0px 60px 0;
+  height: 450px;
+  width: 550px;
+}
+.audio-title {
+  padding: 3px 0;
+}
+audio::-webkit-media-controls-panel {
+  background: #d23232;
+}
+audio::-webkit-media-controls-current-time-display {
+  font-family: "Raleway", sans-serif;
+}
+audio::-webkit-media-controls-time-remaining-display {
+  font-family: "Raleway", sans-serif;
+}
 @media only screen and (max-width: 768px) {
   .show-text {
     display: block;
@@ -114,6 +142,25 @@
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
+  .show-music {
+    display: block;
+  }
+  .show-music .gif-picture {
+    margin: 100px 290px 0 290px;
+  }
+  .songs-list {
+    margin: 25px 330px 0 350px;
+  }
+  .gif-picture {
+    object-fit: cover;
+    margin: 0px -60px;
+    height: 300px;
+    width: 400px;
+  }
+  .audio-title {
+    padding: 5px 10px;
+    width: 200px;
+  }
 }
 @media only screen and (max-width: 600px) {
   .sidebar {
@@ -122,7 +169,7 @@
     top: 0;
     left: 0;
     width: 500px;
-    height: 253px;
+    height: 260px;
     padding: 10px 0;
     font-weight: 300;
   }
@@ -145,7 +192,7 @@
   }
   .sidebar .sidebar-menu .sidebar-item #item-link {
     display: block;
-    padding: 10px 20px;
+    padding: 5px 20px;
     border-bottom: 1px solid #407088;
     color: rgb(241, 237, 237);
     font-size: 16px;
@@ -167,14 +214,33 @@
   }
   .show-text {
     display: block;
-    margin: 270px 20px 20px 20px;
+    margin: 280px 20px 20px 20px;
     font-size: large;
     text-align: justify;
     line-height: 1.6;
     white-space: pre-line;
   }
   .show-discography .discography-menu .discography-list {
-    margin: 270px 0px 30px 30px;
+    margin: 280px 0px 30px 30px;
     display: block;
+  }
+  .show-music {
+    display: block;
+  }
+  .show-music .gif-picture {
+    margin: 280px 35px 0 35px;
+  }
+  .songs-list {
+    margin: 10px 35px 0 35px;
+  }
+  .gif-picture {
+    object-fit: cover;
+    margin: 0px -60px;
+    height: 200px;
+    width: 300px;
+  }
+  .audio-title {
+    padding: 5px 10px;
+    width: 200px;
   }
 }
