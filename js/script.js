@@ -58,10 +58,36 @@ const renderData = () => {
         "https://upload.wikimedia.org/wikipedia/en/1/10/Lana_Del_Rey_-_Blue_Banisters_cover.png",
     },
   ];
+  const songsData = [
+    {
+      title: "Art Deco",
+      song: "assets/songs/art_deco.mp3",
+    },
+    {
+      title: "High By the Beach ",
+      song: "assets/songs/high_by_the_beach.mp3",
+    },
+    {
+      title: "Lust for Life",
+      song: "assets/songs/lust_for_life.mp3",
+    },
+    {
+      title: "Serial Killer",
+      song: "assets/songs/serial_killer.mp3",
+    },
+    {
+      title: "Watercolor Eyes",
+      song: "assets/songs/watercolor_eyes.mp3",
+    },
+    {
+      title: "White Mustang",
+      song: "assets/songs/white_mustang.mp3",
+    },
+  ];
 
   const p = document.createElement("p");
   const discography_block = document.querySelector(".discography-block");
-
+  const music_block = document.querySelector(".music-block");
   function showText() {
     aboutBlockData.map((item) => {
       let about_block = document.querySelector(".about-block");
@@ -69,6 +95,9 @@ const renderData = () => {
       p.textContent = item.artist_description;
       about_block.append(p);
       discography_block.classList.add("hidden");
+      discography_block.classList.remove("show-discography");
+      music_block.classList.add("hidden");
+      music_block.classList.remove("show-music");
     });
   }
 
@@ -78,10 +107,15 @@ const renderData = () => {
   const sidebar_item2 = document.querySelector(".item-link2");
   sidebar_item2.addEventListener("click", showDiscography);
 
+  const sidebar_item3 = document.querySelector(".item-link3");
+  sidebar_item3.addEventListener("click", showMusicBlock);
+
   function showDiscography() {
     discography_block.innerHTML = "";
     p.classList.add("hidden");
     p.classList.remove("show-text");
+    music_block.classList.add("hidden");
+    music_block.classList.remove("show-music");
     discography_block.classList.add("show-discography");
     discography_block.classList.remove("hidden");
     let nav = document.createElement("nav");
@@ -106,5 +140,42 @@ const renderData = () => {
     });
     nav.append(ul);
     discography_block.append(nav);
+  }
+  function showMusicBlock() {
+    music_block.innerHTML = "";
+    p.classList.add("hidden");
+    p.classList.remove("show-text");
+    discography_block.classList.add("hidden");
+    discography_block.classList.remove("show-discography");
+    music_block.classList.remove("hidden");
+    music_block.classList.add("show-music");
+    let artist_gif = document.createElement("img");
+    artist_gif.setAttribute(
+      "src",
+      "https://media3.giphy.com/media/dCKUsVKKovtreV5N5R/giphy.gif?cid=790b76111eaf95b4cee064beb9d3eb4f9d45a6085c229a6b&rid=giphy.gif&ct=g"
+    );
+    artist_gif.classList.add("gif-picture");
+    let nav = document.createElement("nav");
+    nav.classList.add("songs-menu");
+    let ul = document.createElement("ul");
+    ul.classList.add("songs-list");
+
+    songsData.map((item) => {
+      let li = document.createElement("li");
+      li.classList.add("song-item");
+      let song = document.createElement("audio");
+      song.classList.add("audio");
+      song.controls = true;
+      song.setAttribute("src", item.song);
+      let song_title = document.createElement("h3");
+      song_title.classList.add("audio-title");
+      song_title.textContent = item.title;
+      li.append(song_title, song);
+      ul.append(li);
+    });
+    nav.append(ul);
+    music_block.append(artist_gif);
+    music_block.append(nav);
+    console.log(music_block);
   }
 };
