@@ -20,7 +20,6 @@
   margin-bottom: 30px;
   text-align: center;
 }
-
 .sidebar .profile .profile-picture {
   display: block;
   width: 100px;
@@ -99,33 +98,117 @@
   height: 300px;
   object-fit: cover;
 }
-.show-music {
-  display: flex;
-  justify-content: center;
+.music-block {
+  margin: 75px 540px 0 540px;
 }
-.show-music .gif-picture {
-  margin: 130px 50px 0 200px;
+.music-block .video-block-title {
+  margin: 65px 0px 0 0;
 }
-.songs-list {
-  margin: 100px 0;
+.music-block .video {
+  width: 700px;
+  height: 500px;
+  margin: 50px 0;
 }
-.gif-picture {
-  object-fit: cover;
-  margin: 0px 60px 0;
-  height: 450px;
-  width: 550px;
-}
-.audio-title {
-  padding: 3px 0;
-}
-audio::-webkit-media-controls-panel {
-  background: #d23232;
-}
-audio::-webkit-media-controls-current-time-display {
-  font-family: "Raleway", sans-serif;
-}
-audio::-webkit-media-controls-time-remaining-display {
-  font-family: "Raleway", sans-serif;
+@media only screen and (min-width: 2560px) {
+  .sidebar {
+    background: #407088;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding: 20px 0;
+    font-weight: 300;
+  }
+  .sidebar .profile {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .sidebar .profile .profile-picture {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .sidebar .profile .profile-picture:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  .sidebar .profile .profile-title {
+    color: #ffffff;
+    margin: 15px 0 5px;
+    font-size: xx-large;
+  }
+  .sidebar .profile .profile-description {
+    color: rgb(206, 240, 253);
+    font-size: x-large;
+  }
+  .sidebar .sidebar-menu .sidebar-item #item-link {
+    display: block;
+    padding: 15px 30px;
+    border-bottom: 1px solid rgb(5, 68, 104);
+    color: rgb(241, 237, 237);
+    font-size: xx-large;
+    position: relative;
+  }
+  .sidebar .sidebar-menu #item-link:hover,
+  .sidebar .sidebar-menu #item-link.active {
+    color: #0c7db1;
+    background: white;
+    border-right: 2px solid rgb(5, 68, 104);
+  }
+  .sidebar.sidebar-menu #item-link:hover:before,
+  .sidebar .sidebar-menu #item-link:before {
+    display: block;
+  }
+  .show-text {
+    display: block;
+    margin: 200px 270px 10px 510px;
+    font-size: xx-large;
+    text-align: justify;
+    line-height: 2;
+    white-space: pre-line;
+  }
+  .show-discography .discography-menu .discography-list {
+    margin: 40px 200px 30px 550px;
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    grid-template-rows: repeat(3, 4fr);
+  }
+  .discography-item {
+    margin: 10px 10px 20px 10px;
+    font-size: xx-large;
+  }
+  .album-title {
+    width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: xx-large;
+  }
+  .discography-img {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  .music-block {
+    margin: 240px 680px 0 680px;
+  }
+  .music-block .video-block-title {
+    margin: 65px 0px 0 0;
+    font-size: xx-large;
+  }
+  .music-block .video {
+    width: 1400px;
+    height: 1000px;
+    margin: 50px 0;
+  }
 }
 @media only screen and (max-width: 768px) {
   .show-text {
@@ -142,33 +225,16 @@ audio::-webkit-media-controls-time-remaining-display {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
   }
-  .show-music {
-    display: block;
+  .music-block {
+    margin: 210px 290px 0 290px;
   }
-  .show-music .gif-picture {
-    margin: 100px 290px 0 290px;
+  .music-block .video-block-title {
+    margin: 60px -200px 0 0px;
   }
-  .songs-list {
-    margin: 25px 330px 0 350px;
-  }
-  .gif-picture {
-    object-fit: cover;
-    margin: 0px -60px;
-    height: 300px;
+  .music-block .video {
     width: 400px;
-  }
-  .audio-title {
-    padding: 5px 10px;
-    width: 200px;
-  }
-  audio::-webkit-media-controls-panel {
-    background: #d23232;
-  }
-  audio::-webkit-media-controls-current-time-display {
-    font-family: "Raleway", sans-serif;
-  }
-  audio::-webkit-media-controls-time-remaining-display {
-    font-family: "Raleway", sans-serif;
+    height: 500px;
+    margin: 30px 0;
   }
 }
 @media only screen and (max-width: 600px) and (max-height: 844px) {
@@ -223,43 +289,26 @@ audio::-webkit-media-controls-time-remaining-display {
   }
   .show-text {
     display: block;
-    margin: 280px 15px 20px 15px;
+    margin: 290px 15px 20px 15px;
     font-size: large;
     text-align: justify;
     line-height: 1.6;
     white-space: pre-line;
   }
   .show-discography .discography-menu .discography-list {
-    margin: 280px 25px 0px 25px;
+    margin: 290px 34px 0px 34px;
     display: block;
   }
-  .show-music {
-    display: block;
+  .music-block {
+    margin: 320px 42px 0 42px;
   }
-  .show-music .gif-picture {
-    margin: 280px 35px 0 35px;
+  .music-block .video-block-title {
+    margin: 60px -20px 0 0px;
   }
-  .songs-list {
-    margin: 10px 35px 0 35px;
-  }
-  .gif-picture {
-    object-fit: cover;
-    margin: 0px -60px;
-    height: 200px;
+  .music-block .video {
     width: 300px;
-  }
-  .audio-title {
-    padding: 5px 10px;
-    width: 200px;
-  }
-  audio::-webkit-media-controls-panel {
-    background: #d23232;
-  }
-  audio::-webkit-media-controls-current-time-display {
-    font-family: "Raleway", sans-serif;
-  }
-  audio::-webkit-media-controls-time-remaining-display {
-    font-family: "Raleway", sans-serif;
+    height: 400px;
+    margin: 20px 0;
   }
 }
 
@@ -315,42 +364,25 @@ audio::-webkit-media-controls-time-remaining-display {
   }
   .show-text {
     display: block;
-    margin: 280px 15px 20px 15px;
+    margin: 290px 15px 20px 15px;
     font-size: large;
     text-align: justify;
     line-height: 1.6;
     white-space: pre-line;
   }
   .show-discography .discography-menu .discography-list {
-    margin: 280px 25px 20px 25px;
+    margin: 290px 25px 20px 25px;
     display: block;
   }
-  .show-music {
-    display: block;
+  .music-block {
+    margin: 295px 35px 0 35px;
   }
-  .show-music .gif-picture {
-    margin: 280px 33px 0 33px;
+  .music-block .video-block-title {
+    margin: 60px -20px 0 0px;
   }
-  .songs-list {
-    margin: 10px 33px 0 33px;
-  }
-  .gif-picture {
-    object-fit: cover;
-    margin: 0px -60px;
-    height: 200px;
+  .music-block .video {
     width: 300px;
-  }
-  .audio-title {
-    padding: 5px 10px;
-    width: 200px;
-  }
-  audio::-webkit-media-controls-panel {
-    background: #d23232;
-  }
-  audio::-webkit-media-controls-current-time-display {
-    font-family: "Raleway", sans-serif;
-  }
-  audio::-webkit-media-controls-time-remaining-display {
-    font-family: "Raleway", sans-serif;
+    height: 400px;
+    margin: 20px 0;
   }
 }
