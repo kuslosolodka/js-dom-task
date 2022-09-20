@@ -58,32 +58,6 @@ const renderData = () => {
         "https://upload.wikimedia.org/wikipedia/en/1/10/Lana_Del_Rey_-_Blue_Banisters_cover.png",
     },
   ];
-  const songsData = [
-    {
-      title: "Art Deco",
-      song: "assets/songs/art_deco.mp3",
-    },
-    {
-      title: "High By the Beach ",
-      song: "assets/songs/high_by_the_beach.mp3",
-    },
-    {
-      title: "Lust for Life",
-      song: "assets/songs/lust_for_life.mp3",
-    },
-    {
-      title: "Serial Killer",
-      song: "assets/songs/serial_killer.mp3",
-    },
-    {
-      title: "Watercolor Eyes",
-      song: "assets/songs/watercolor_eyes.mp3",
-    },
-    {
-      title: "White Mustang",
-      song: "assets/songs/white_mustang.mp3",
-    },
-  ];
 
   const p = document.createElement("p");
   const discography_block = document.querySelector(".discography-block");
@@ -149,33 +123,22 @@ const renderData = () => {
     discography_block.classList.remove("show-discography");
     music_block.classList.remove("hidden");
     music_block.classList.add("show-music");
-    let artist_gif = document.createElement("img");
-    artist_gif.setAttribute(
-      "src",
-      "https://media3.giphy.com/media/dCKUsVKKovtreV5N5R/giphy.gif?cid=790b76111eaf95b4cee064beb9d3eb4f9d45a6085c229a6b&rid=giphy.gif&ct=g"
-    );
-    artist_gif.classList.add("gif-picture");
-    let nav = document.createElement("nav");
-    nav.classList.add("songs-menu");
-    let ul = document.createElement("ul");
-    ul.classList.add("songs-list");
 
-    songsData.map((item) => {
-      let li = document.createElement("li");
-      li.classList.add("song-item");
-      let song = document.createElement("audio");
-      song.classList.add("audio");
-      song.controls = true;
-      song.setAttribute("src", item.song);
-      let song_title = document.createElement("h3");
-      song_title.classList.add("audio-title");
-      song_title.textContent = item.title;
-      li.append(song_title, song);
-      ul.append(li);
-    });
-    nav.append(ul);
-    music_block.append(artist_gif);
-    music_block.append(nav);
-    console.log(music_block);
+    let video_block_title = document.createElement("h3");
+    video_block_title.classList.add("video-block-title");
+    video_block_title.textContent =
+      "There are unreleased Lana Del Rey songs. Enjoy!";
+
+    let video = document.createElement("iframe");
+    video.setAttribute("src", "https://www.youtube.com/embed/OpYtndKTYdY");
+    video.setAttribute("frameborder", 0);
+    video.setAttribute(
+      "allow",
+      "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+    );
+    video.setAttribute("allowfullscreen", true);
+    video.classList.add("video");
+
+    music_block.append(video_block_title, video);
   }
 };
